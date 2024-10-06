@@ -100,10 +100,10 @@ document.addEventListener('DOMContentLoaded', function(){
         }
         
         //wall collision checks
-        const hitLeftWall=snake[0].x <= 0; //snake[0]-> head
-        const hitRightWall=snake[0].x > arenaSize-(cellsize*2);
-        const hitTopWall=snake[0].y <= 0;
-        const hitBottomWall=snake[0].y > arenaSize-(cellsize*2);
+        const hitLeftWall=snake[0].x < 0; //snake[0]-> head
+        const hitRightWall=snake[0].x > arenaSize-cellsize;
+        const hitTopWall=snake[0].y < 0;
+        const hitBottomWall=snake[0].y > arenaSize-cellsize;
         return hitLeftWall || hitRightWall || hitTopWall || hitBottomWall;
     }
 
